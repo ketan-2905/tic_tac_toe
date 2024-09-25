@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Martian Mono", monospace;
+}
+
+.tic-tac-toe-body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #14BDAC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.X{
+    color: #282A2C;
+}
+
+.player{
+    z-index: 100;
+    background-color: #ffffff45;
+    border-radius: 4px;
+    padding: 4px 0.5rem;
+    box-shadow: 2px 2px;
+    cursor: pointer;
+}
+
+.preventPointer{
+    pointer-events: none;
+}
+
+.btn{
+    width: 8rem;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: #0DA192;
+    border-radius: 1rem; 
+    box-shadow: 2px 2px;
+    cursor: pointer;
+}
+
+
+.from{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(5px);
+    position: absolute;
+    z-index: 10;
+}
+
+.from form{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #14BDAC;
+    border-radius: 4px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.36);
+}
+
+.from form input{
+    background-color: #555555;
+    padding: 0.5rem;
+    outline: none;
+    border-radius:4px ;
+    font-size: 1rem;
+    color: aliceblue;
+    box-shadow: 2px 2px;
+}
+
+.from form input[type = 'submit']{
+    box-shadow: 2px 2px;
+    cursor: pointer;
+}
+
+.instruction {
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 189, 172, 0.8); 
+    backdrop-filter: blur(5px);
+}
+
+.instruction ul {
+    margin-top: 1rem;
+    width: 40%;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.instruction ul li {
+    font-family: "Martian Mono", monospace;
+    line-height: 1.5rem;
+    color: #282A2C; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.ok-btn{
+    position: relative;
+}
+
+.tooltip-text{
+    position: absolute;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    background-color: #4c4a4a;
+    border-radius: 4px;
+    color: aliceblue;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 0.6rem;
+    padding: 0.2rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5 ease;
+}
+
+.tooltip-text::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%);
+    border: 15px solid #4c4a4a;
+    border-color: #4c4a4a transparent transparent transparent;
+}
+
+.ok-btn:hover .tooltip-text{
+    top: -130%;
+    visibility: visible;
+    opacity: 1;
+}
+
+.turns{
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem ;
+}
+
+.turn{
+    box-shadow: 2px 2px black;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    background-color:#0DA192;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.turnsection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.player-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hig{
+    color: white;
+    background-color: #282A2C;
+    border-radius: 4px;
+    padding: 4px 0.5rem;
+}
+
+.scale{
+    transform: scale(1.5);
+}
+
+.win-count{
+    position: absolute;
+    top: 6rem;
+    left: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem ;
+}
+
+.win{
+    box-shadow: 2px 2px black;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    background-color:#0DA192;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+
+.tic-tac-toe-winnwer-layout{
+    width: 18rem;
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem ;
+}
+
+.tic-tac-toe-gride-layout{
+    display: grid;
+    grid-template-columns: repeat(3, 6rem);
+    grid-template-rows: repeat(3, 6rem);
+    gap: 0rem;
+}
+
+button{
+    background-color: #14BDAC;
+    border: none;
+    height: 6rem;
+    width: 6rem;
+    font-size: 3.8rem;
+    border-radius: 0.1rem;
+}
+
+ .one , .four{
+border-right:0.5rem solid #0DA192;
+border-bottom:0.5rem solid #0DA192;
+}
+
+.three , .six{
+    border-left:0.5rem solid #0DA192;
+    border-bottom:0.5rem solid #0DA192;
+}
+
+.seven{
+    color: #545454;
+    border-right:0.5rem solid #0DA192;
+}
+
+.nine{
+    border-left:0.5rem solid #0DA192;
+}
+
+.five{
+    border-bottom:0.5rem solid #0DA192;
+}
+
+.two{
+    color: #F2EBD3;
+    border-bottom: 0.5rem solid #0DA192;  
+}
+
+
+
+.O{
+    color: #F2EBD3;
+}
+
+.winner-symbol{
+    font-size: 6rem;
+    text-align: center;
+}
+
+.winner-text{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #545454;
+}
+
+.textBlur{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.restart-game{
+    position: absolute;
+    transform: translate(-50% , -50%);
+    left: 50%;
+    bottom: 3rem; 
+}
+
+.reset-btn{
+    color: #545454;
+}
+
+
+.hide{
+    display: none;
+}

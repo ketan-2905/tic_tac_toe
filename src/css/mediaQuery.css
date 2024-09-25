@@ -1,0 +1,28 @@
+@media screen and (max-width: 450px) {
+    .instruction ul {
+        width: 90%;
+    }
+
+    .instruction ul{
+        z-index: 10;
+    }
+
+    .instruction ul li {
+        font-size: 12px;
+        line-height: 1.2rem;
+    }
+
+    .from form{
+        padding: 1rem;
+    }
+
+    .turns{
+        top: 1%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .player-name{
+        display: block;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/mediaQuery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="turns">
+        <div class="turnsection">
+        <span class="player player1">Player1</span>
+        <div class="turn x-turn X"><i class="fa-solid fa-x"></i></div>
+        <div class="win x-win X">0</div>
+        </div>
+        <div class="turnsection">
+        <span class="player player2">Player2</span>
+        <div class="turn o-turn O"><i class="fa-regular fa-circle"></i></div>
+        <div class="win o-win O">0</div>
+        </div>
+    </div>
+    <div class="from hide">
+        <form action="">
+        <div class="for"></div>
+        <div class="input">
+            <label>Player</label>
+            <input type="text">
+        </div>
+        <input type="submit" value="Accept" id="submit">
+        </form>
+    </div>
+    <div class="instruction">
+        
+        <ul>
+            <div class="player-name hide">
+                <span class="player player1">Player1</span>
+                <span class="player player2">Player2</span>
+            </div>
+            <li><strong>Goal:</strong> Form a straight line of three of your marks—either horizontally, vertically, or diagonally—to win the game.</li>
+            <li><strong>Taking Turns:</strong> Players alternate turns, placing their mark (X or O) in an empty box on the 3x3 grid.</li>
+            <li><strong>Three-Mark Rule:</strong> Each player can only have three marks on the board. Once you place your fourth mark, the <span class="hig">oldest one disappears</span>, keeping you with three, making room for new strategies as you play.</li>
+            <li><strong>Victory:</strong> Keep aligning your marks while managing the disappearing marks—first player to form a line of three wins the game!</li>
+            <div class="ok-btn">
+                <span class="tooltip-text">Enter and name into the player1 and player2 section in the top left corner by click on it</span>
+                <button class="btn ok">OK</button>
+            </div>
+          </ul>  
+            
+    </div>
+    <div class="tic-tac-toe-body hide">  
+         <div class="tic-tac-toe-layout tic-tac-toe-gride-layout">
+        </div>
+       <div class="restart-game">
+        <button class="btn reset-btn hide">Restart Game</button>
+       </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
