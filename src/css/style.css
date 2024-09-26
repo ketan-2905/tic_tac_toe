@@ -17,10 +17,6 @@
     flex-direction: column;
 }
 
-.X{
-    color: #282A2C;
-}
-
 .player{
     z-index: 100;
     background-color: #ffffff45;
@@ -314,11 +310,12 @@ border-bottom:0.5rem solid #0DA192;
 }
 
 .two{
-    color: #F2EBD3;
     border-bottom: 0.5rem solid #0DA192;  
 }
 
-
+.X{
+    color: #282A2C;
+}
 
 .O{
     color: #F2EBD3;
