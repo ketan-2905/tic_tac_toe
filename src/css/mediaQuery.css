@@ -23,6 +23,17 @@
     }
 
     .player-name{
-        display: block;
+        display: flex;
+    }
+
+    .from form input{
+        width: 200px;
+        padding: 0.5rem 0.3rem;
+    }
+
+    .from form input[type = 'submit']{
+        width: 150px;
+        box-shadow: 2px 2px;
+        cursor: pointer;
     }
 }
