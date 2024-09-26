@@ -156,6 +156,40 @@
     opacity: 1;
 }
 
+.tooltip-text-mobile{
+    position: absolute;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    background-color: #4c4a4a;
+    border-radius: 4px;
+    color: aliceblue;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 0.6rem;
+    padding: 0.2rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5 ease;
+}
+
+.tooltip-text-mobile::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%);
+    border: 15px solid #4c4a4a;
+    border-color: #4c4a4a transparent transparent transparent;
+}
+
+.ok-btn:hover .tooltip-text-mobile{
+    top: -130%;
+    visibility: visible;
+    opacity: 1;
+}
+
 .turns{
     position: absolute;
     top: 2rem;

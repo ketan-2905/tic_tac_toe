@@ -36,4 +36,11 @@
         box-shadow: 2px 2px;
         cursor: pointer;
     }
+    .tooltip-text{
+        display: none;
+    }
+
+    .tooltip-text-mobile{
+        display: block;
+    }
 }
