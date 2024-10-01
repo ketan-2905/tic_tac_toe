@@ -32,9 +32,10 @@ Welcome to the **Tic Tac Toe** game, a web-based implementation of the classic g
 
 ## How to Play
 
-- Players take turns clicking on empty cells to mark their symbol (X or O).
-- The game detects and announces the winner or a draw once all cells are filled.
-- To start a new game, simply refresh the page.
+- **Goal:** Form a straight line of three of your marks—either horizontally, vertically, or diagonally—to win the game.
+- **Taking Turns:** Players alternate turns, placing their mark (X or O) in an empty box on the 3x3 grid.
+- **Three-Mark Rule:** Each player can only have three marks on the board. When placing a fourth mark, the oldest one disappears, maintaining three marks on the grid. This introduces new strategic opportunities as the game progresses.
+- **Victory:** Manage your disappearing marks while continuing to align three in a row. The first player to form a straight line of three wins the game!
 
 ## Future Enhancements
 
